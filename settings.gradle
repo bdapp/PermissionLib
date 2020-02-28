@@ -1,0 +1,2 @@
+include ':app', ':permissionlib'
+rootProject.name='TestRequestPermission'
