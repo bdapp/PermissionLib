@@ -3,6 +3,8 @@
 
 
 ```
+# 写法一：
+
 String[] perArr = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA,
             Manifest.permission.ACCESS_COARSE_LOCATION};
@@ -27,8 +29,10 @@ PermissionHelper.with(MainActivity.this)
 ```
 
 ```
+# 写法二：
+
 // 获取权限
-                PermissionHelper.with(MainActivity.this)
+PermissionHelper.with(MainActivity.this)
                         .permission(Manifest.permission.WRITE_EXTERNAL_STORAGE, "自定义提示标题", "自定义提示内容")
                         .permission(Manifest.permission.ACCESS_COARSE_LOCATION, "自定义提示标题", "自定义提示内容")
                         .onAllow(new PermissionHelper.AllowCallback() {
